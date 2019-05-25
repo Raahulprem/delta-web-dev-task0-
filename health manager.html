@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styling file.css ">
+<link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Bree+Serif|Dancing+Script|Gloria+Hallelujah|Indie+Flower|Lobster|Macondo+Swash+Caps|Maiden+Orange|Pacifico|Permanent+Marker|Righteous|Shadows+Into+Light|Teko&display=swap" rel="stylesheet">
+
+</head>
+<title>health check page</title>
+<body style="background-color:lavender">
+<header>
+<img style="position:absolute;top:0px;left:0px;right:0px" width="100%" height="100px" src="pixel.jpg" alt="sorry"/>
+<h1>
+Your Health Manager 
+</h1>
+<br/><br/><br/><br/><br/>
+
+<nav class="navigation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our advice &nbsp; </nav>
+<nav class="navigation">&nbsp;food item</nav>
+<nav class="navigation">&nbsp;home</nav>
+<nav class="navigation">&nbsp;contact us</nav>
+</header>
+<main>
+<section>
+</br></br></br></br></br>
+<p class="firstcontent">
+We welcome you to become a fit and healthy person. Here you can make your daily shedule.
+We help you by managing the amount of calories,proteins,fats and more nutrients that you
+take. We also give you sugestions for healthier life.enjoy your experience.
+</p>
+
+</section>
+<section>
+<form name="personalinfo">  
+What is your name:<br/>
+<input id="name" type="text" name="name"/><br/>
+How old are you:<br/>
+<input id="age" type="number" name="age"/><br/><br/><br/>
+your height in centimetres:<br/>
+<input id="height" type="number" name="height"/><br/><br/>
+what is your current weight?<br/>
+<input id="weight" type="number" name="weight"/><br/><br/>
+You are &nbsp;&nbsp;<input type="radio" name="gender"/>&nbsp;&nbsp;male&nbsp;&nbsp;<input type="radio" name="gender"/>&nbsp;&nbsp;female<br/><br/>
+<button id="btn" onclick=" save()" >save</button><br/>
+</form>
+<br/>
+<form>
+<br/><br/><br/>
+<h3>YOUR DAILY CONSUMPTION MONITOR</h3>
+<br/><br/><br/><br/><br/>
+add the food items you eat:&nbsp;
+<input type="text" name="food"/><br/><br/>
+how much carbs does it contain ?<br/><br/>
+<input id="carbs" type="number" name="carbs"/><br/><br/>
+how much proteins does it contain ?<br/><br/>
+<input id="proteins" type="number" name="proteins"/><br/><br/>
+how much fats does it contain ?<br/><br/>
+<input id="fats" type="number" name="fats"/><br/><br/><br/><br/><br/>
+add the amount of water you consumed after the last entry.<br/><br/>
+<input id="water" type="number" name="water"/><br/><br/>
+<button id="btn2" onclick=" check()" >save</button><br/>
+</form>
+<br/>
+<p id="notice">
+<br/><br/>
+Please make sure you update the details frequently for managing your health better.</b>
+</p>
+</section>
+
+</main>
+<footer>
+<div id="advices"></div><br/><br/><br/><br/>
+<div class="footer">Thanks for using our site</div>
+<div class="footer">With love Raahul Kumar</div>
+       
+</footer>
+<script src="script.js" ></script>
+<!--<script type="text/javascript">
+  var age= document.personalinfo.age.value;
+  function save(){
+    var name= document.personalinfo.name.value;
+	var age= document.personalinfo.age.value;
+	var weight= document.personalinfo.weight.value;
+	var height= document.personalinfo.height.value; 
+    var bmi = (weight/(height*height))*100;
+    if (bmi>=25){alert('you are overweigtht reduce your food in take')}
+    if (bmi<=18){alert('you are underweigtht increase your food in take')}
+    else(){alert('your on perfect diet')}
+	
+  }
+</script> -->	 
+</body>
+
+</html>

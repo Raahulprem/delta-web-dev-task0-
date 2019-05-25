@@ -1,0 +1,64 @@
+/*
+font-family: 'Indie Flower', cursive;
+font-family: 'Macondo Swash Caps', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Maiden Orange', cursive;
+font-family: 'Acme', sans-serif;
+font-family: 'Bree Serif', serif;
+font-family: 'Teko', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Permanent Marker', cursive;
+*/
+h1{
+	color:orangeRed;
+	text-align:center;
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size:3em;
+	position:absolute;
+	top:0px;
+	left:35%
+		
+	
+}
+.navigation{
+	display:inline;
+	text-align:center;
+	padding-left:2em;
+    font-family: 'Acme', sans-serif;
+    color:teal;	
+	font-size:1.25em;
+	
+}	
+
+
+.firstcontent{
+	font-family: 'Maiden Orange', cursive;
+	font-size: 1.5em;
+	text-align:center;
+	color:MediumBlue;
+}
+
+.footer{
+	font-family: 'Permanent Marker', cursive;
+	text-align:center;
+	font-size:1.6em;
+}
+#notice{
+	font-size:1.5em;
+	font-family:'Amatic SC', cursive;
+	font-weight:900;
+	color:red;
+	text-align:right;
+}
+
+#advices{
+	font-size:2em;
+	font-family: 'Righteous', cursive;
+	text-align:center;
+	
+}
