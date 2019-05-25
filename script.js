@@ -48,8 +48,27 @@ var height = document.getElementById("height");
 var weight = document.getElementById("weight");
 var btn = document.getElementById("btn");
 
-btn.addEventListener("click",function(){alert('hi');
+btn.addEventListener("click",function(){
+	localStorage.name = name.value;
+	localStorage.age = age.value;
+	localStorage.height = height.value;
+	localStorage.weight = weight.value;	
+	   	
 
 });
+a = parseInt(localStorage.height);
+b   = parseInt(localStorage.age);
+c  = parseInt(localStorage.weight);
 
-document.write(localStorage.name);
+var bmi= (localStorage.weight/(localStorage.height*localStorage.height)*100);
+if(bmi > 25){alert('you are over weight, manage your diet')}
+if(bmi < 18){alert('you are under weight eat more food')}
+document.write(localStorage.weight);
+document.write(localStorage.height);
+document.write(localStorage.age);
+
+var btn2 = document.getElementById("btn2 ");
+var carbs = document.getElementById("carbs");
+var proteins = document.getElementById("proteins");
+var fats = document.getElementById("fats");
+var water = document.getElementById("water");
