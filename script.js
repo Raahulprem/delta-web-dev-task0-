@@ -64,9 +64,9 @@ a = parseInt(localStorage.height);
 b   = parseInt(localStorage.age);
 c  = parseInt(localStorage.weight);
 
-var bmi= (localStorage.weight/(localStorage.height*localStorage.height)*100);
+var bmi= (localStorage.weight/(localStorage.height*localStorage.height)*10000);
 if(bmi > 25){alert('you are over weight, manage your diet')}
-if(bmi < 18){alert('you are under weight eat more food')}
+else if(bmi < 18){alert('you are under weight eat more food')}
 else{alert('you are in perfect fitness')}
 /*document.write(localStorage.weight);
 document.write(localStorage.height);
@@ -79,7 +79,10 @@ var fats = document.getElementById("fats");
 var water = document.getElementById("water");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
-btn2.addEventListener("click",function(){
+
+/*var height= document.personalinfo.height.value;
+alert(height);*/
+/*btn2.addEventListener("click",function(){
 	localStorage.carbs = carbs.value;
 	localStorage.water = water.value;
 	localStorage.fats = fats.value;
@@ -87,11 +90,21 @@ btn2.addEventListener("click",function(){
 	   	
 
 });
-var d = parseInt(localStorage.carbs);
+ d = parseInt(localStorage.carbs);
 e = parseInt(localStorage.water);
 f = parseInt(localStorage.proteins);
 g = parseInt(localStorage.fats);
-document.write(d);
+alert(d);
+*/
+
+btn2.addEventListener("click",function(){
+	localStorage.setItemtem('carbs', carbs.value);
+	localStorage.water = water.value;
+	localStorage.fats = fats.value;
+	localStorage.proteins = proteins.value;	
+});
+var carbs = localStorage.getItem('carbs');
+alert(carbs);
 
 /*btn3.addEventListener("click",function(){
 	localStorage.carbs += carbs.value;
