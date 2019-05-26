@@ -51,26 +51,101 @@ var age = document.getElementById("age");
 var height = document.getElementById("height");
 var weight = document.getElementById("weight");
 var btn = document.getElementById("btn");
+var gender = document.getElementsByName("gender"); 
 
 btn.addEventListener("click",function(){
 	localStorage.name = name.value;
 	localStorage.age = age.value;
 	localStorage.height = height.value;
-	localStorage.weight = weight.value;	
-	   	
-
+	localStorage.weight = weight.value;
+    if(gender[0].checked){
+		localStorage.gender = 1;
+	}	
+	else if (gender[1].checked){
+		localStorage.gender = 2;
+	}
+    else{
+		localStorage.gender = 0;
+	}
 });
 a = parseInt(localStorage.height);
 b   = parseInt(localStorage.age);
 c  = parseInt(localStorage.weight);
 
+if (localStorage.gender==2){
+	if(localStorage.age<4){
+		var carbslimit = 1000;
+		var proteinslimit = 65;
+	}
+	else if(localStorage.age>=4 && localStorage.age<13){
+		var carbslimit = 1600;
+		var proteinslimit = 45;
+	}
+	else if(localStorage.age>=13 && localStorage.age<19){
+		var carbslimit = 1800;
+		var proteinslimit = 45;
+	}
+	else if(localStorage.age>=19 && localStorage.age<30){
+		var carbslimit = 2000;
+		var proteinslimit = 50;
+	}
+	else if(localStorage.age>=30 && localStorage.age<50){
+		var carbslimit = 1800;
+		var proteinslimit = 50;
+	}
+	else if(localStorage.age>=50 && localStorage.age<70){
+		var carbslimit = 1600;
+		var proteinslimit = 53;
+	}
+	else{
+		var carbslimit = 1600;
+		var proteinslimit = 57;
+		
+	}
+}
+if (localStorage.gender==1){
+	if(localStorage.age<4){
+		var carbslimit = 1000;
+		var proteinslimit = 65;
+	}
+	else if(localStorage.age>=4 && localStorage.age<13){
+		var carbslimit = 1800;
+		var proteinslimit = 65;
+	}
+	else if(localStorage.age>=13 && localStorage.age<19){
+		var carbslimit = 2200;
+		var proteinslimit = 65;
+	}
+	else if(localStorage.age>=19 && localStorage.age<30){
+		var carbslimit = 2400;
+		var proteinslimit = 60;
+	}
+	else if(localStorage.age>=30 && localStorage.age<50){
+		var carbslimit = 2200;
+		var proteinslimit = 60;
+	}
+	else if(localStorage.age>=50 && localStorage.age<70){
+		var carbslimit = 2000;
+		var proteinslimit = 70;
+	}
+	else{
+		var carbslimit = 2000;
+		var proteinslimit = 81;
+		
+	}
+}
 var bmi= (localStorage.weight/(localStorage.height*localStorage.height)*10000);
 if(bmi > 25){alert('you are over weight, manage your diet')}
 else if(bmi < 18){alert('you are under weight eat more food')}
 else{alert('you are in perfect fitness')}
 /*document.write(localStorage.weight);
 document.write(localStorage.height);
-document.write(localStorage.age);*/
+document.write(localStorage.age);
+document.write(localStorage.gender);
+
+alert(carbslimit);*/
+
+
 
 var btn2 = document.getElementById("btn2");
 var carbs = document.getElementById("carbs");
@@ -80,8 +155,6 @@ var water = document.getElementById("water");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
 
-/*var height= document.personalinfo.height.value;
-alert(height);*/
 /*btn2.addEventListener("click",function(){
 	localStorage.carbs = carbs.value;
 	localStorage.water = water.value;
@@ -97,15 +170,15 @@ g = parseInt(localStorage.fats);
 alert(d);
 */
 
-btn2.addEventListener("click",function(){
-	localStorage.setItemtem('carbs', carbs.value);
+/*btn2.addEventListener("click",function(){
+	localStorage.setItem('carbs', 'carbs.value');
 	localStorage.water = water.value;
 	localStorage.fats = fats.value;
 	localStorage.proteins = proteins.value;	
 });
-var carbs = localStorage.getItem('carbs');
-alert(carbs);
-
+ carbs = localStorage.getItem('carbs');
+document.write(carbs);
+*/
 /*btn3.addEventListener("click",function(){
 	localStorage.carbs += carbs.value;
 	localStorage.water += water.value;
