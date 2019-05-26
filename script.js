@@ -41,6 +41,10 @@ switch(choice){
 	break;
 	
 }
+
+/*var prot = window.prompt("how much do you think should be your proteins limit");
+var carb = window.prompt("how much do you think should be your carbs limit");
+var fat = window.prompt("how much do you think should be your fats limit"); 	*/
 	
 var name = document.getElementById("name");
 var age = document.getElementById("age");
@@ -63,12 +67,41 @@ c  = parseInt(localStorage.weight);
 var bmi= (localStorage.weight/(localStorage.height*localStorage.height)*100);
 if(bmi > 25){alert('you are over weight, manage your diet')}
 if(bmi < 18){alert('you are under weight eat more food')}
-document.write(localStorage.weight);
+else{alert('you are in perfect fitness')}
+/*document.write(localStorage.weight);
 document.write(localStorage.height);
-document.write(localStorage.age);
+document.write(localStorage.age);*/
 
-var btn2 = document.getElementById("btn2 ");
+var btn2 = document.getElementById("btn2");
 var carbs = document.getElementById("carbs");
 var proteins = document.getElementById("proteins");
 var fats = document.getElementById("fats");
 var water = document.getElementById("water");
+var btn3 = document.getElementById("btn3");
+var btn4 = document.getElementById("btn4");
+btn2.addEventListener("click",function(){
+	localStorage.carbs = carbs.value;
+	localStorage.water = water.value;
+	localStorage.fats = fats.value;
+	localStorage.proteins = proteins.value;	
+	   	
+
+});
+var d = parseInt(localStorage.carbs);
+e = parseInt(localStorage.water);
+f = parseInt(localStorage.proteins);
+g = parseInt(localStorage.fats);
+document.write(d);
+
+/*btn3.addEventListener("click",function(){
+	localStorage.carbs += carbs.value;
+	localStorage.water += water.value;
+	localStorage.fats += fats.value;
+	localStorage.proteins += proteins.value;	
+	  	
+
+});
+if(localStorage.carbs>carb || localStorage.proteins>prot || localStorage.fats>fat){
+		alert('you exceeding your daily limit')
+	} 
+*/
