@@ -148,27 +148,26 @@ alert(carbslimit);*/
 
 
 var btn2 = document.getElementById("btn2");
-var carbs = document.getElementById("carbs");
-var proteins = document.getElementById("proteins");
-var fats = document.getElementById("fats");
-var water = document.getElementById("water");
+/*var carbs = document.getElementById("carbs").value;
+var proteins = document.getElementById("proteins").value;
+var fats = document.getElementById("fats").value;
+var water = document.getElementById("water").value;*/
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
 
-/*btn2.addEventListener("click",function(){
-	localStorage.carbs = carbs.value;
-	localStorage.water = water.value;
-	localStorage.fats = fats.value;
-	localStorage.proteins = proteins.value;	
+btn2.addEventListener("click",function(){
+	localStorage.setItem("carbs",(document.getElementById("carbs").value));
+	localStorage.setItem("proteins",(document.getElementById("proteins").value));
+	localStorage.setItem("fats",(document.getElementById("fats").value));
+	localStorage.setItem("water",(document.getElementById("water").value));	
 	   	
 
 });
- d = parseInt(localStorage.carbs);
-e = parseInt(localStorage.water);
-f = parseInt(localStorage.proteins);
-g = parseInt(localStorage.fats);
-alert(d);
-*/
+let carbs = localStorage.getItem("carbs");
+let proteins = localStorage.getItem("proteins");
+let fats = localStorage.getItem("fats");
+let water =	localStorage.getItem("water");
+
 
 /*btn2.addEventListener("click",function(){
 	localStorage.setItem('carbs', 'carbs.value');
@@ -178,26 +177,53 @@ alert(d);
 });
  carbs = localStorage.getItem('carbs');
 document.write(carbs);
-*/	
-/*btn3.addEventListener("click",function(){
-	localStorage.carbs += carbs.value;
-	localStorage.water += water.value;
-	localStorage.fats += fats.value;
-	localStorage.proteins += proteins.value;	
-	  	
+*/
+
+btn3.addEventListener("click",function(){
+	var carb = 0;
+    var fat = 0;
+    var protein = 0;
+    var watr = 0;	
+	/*localStorage.setItem("carb",(document.getElementById("carbs").value));
+	localStorage.setItem("protein",(document.getElementById("proteins").value));
+	localStorage.setItem("fat",(document.getElementById("fats").value));
+	localStorage.setItem("watr",(document.getElementById("water").value));
+    var carbs = localStorage.getItem("carb");
+    var proteins = localStorage.getItem("protein");
+    var	fats = localStorage.getItem("fat");
+    var water =	localStorage.getItem("watr");*/
+	var carbs = (document.getElementById("carbs").value);
+    var proteins = (document.getElementById("proteins").value;
+    var	fats = (document.getElementById("fats").value);
+    var water =	(document.getElementById("water").value);
+	
+    carb+= carbs;
+	watr+=water;
+	fat+=fats;
+	protein+=proteins;
+	localStorage.setItem("carb",carb);
+	localStorage.setItem("watr",watr);
+	localStorage.setItem("fat",fat);
+	localStorage.setItem("protein",protein);
+	 carb = localStorage.getItem("carb");
+     protein = localStorage.getItem("protein");
+     fat = localStorage.getItem("fat");
+     watr =	localStorage.getItem("watr");	  	
 
 });
-if(localStorage.carbs>carbslimit){
+
+
+
+if(carbs>carbslimit || carb>carbslimit){
 		alert('you exceeding your daily carbs limit');
 	} 
-if( localStorage.proteins>proteinslimit ){
+if( proteins>proteinslimit|| protein>proteinslimit){
 	alert('you exceeding your daily proteinslimit limit');
 	
 }	
-if( localStorage.fats>100){
+if( fats>100 || fat>100){
 		alert('you exceeding your daily fat limit');
 	} 
-if( localStorage.water<4000)	{
+if( water<4000 || watr<4000)	{
 	alert('you have not drank enough water');
 }
-*/
