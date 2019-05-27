@@ -178,7 +178,7 @@ alert(d);
 });
  carbs = localStorage.getItem('carbs');
 document.write(carbs);
-*/
+*/	
 /*btn3.addEventListener("click",function(){
 	localStorage.carbs += carbs.value;
 	localStorage.water += water.value;
@@ -187,7 +187,17 @@ document.write(carbs);
 	  	
 
 });
-if(localStorage.carbs>carb || localStorage.proteins>prot || localStorage.fats>fat){
-		alert('you exceeding your daily limit')
+if(localStorage.carbs>carbslimit){
+		alert('you exceeding your daily carbs limit');
 	} 
+if( localStorage.proteins>proteinslimit ){
+	alert('you exceeding your daily proteinslimit limit');
+	
+}	
+if( localStorage.fats>100){
+		alert('you exceeding your daily fat limit');
+	} 
+if( localStorage.water<4000)	{
+	alert('you have not drank enough water');
+}
 */
