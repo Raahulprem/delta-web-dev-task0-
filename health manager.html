@@ -48,7 +48,7 @@ You are &nbsp;&nbsp;<input type="radio" name="gender" value="1"/>&nbsp;&nbsp;mal
 <h3>YOUR DAILY CONSUMPTION MONITOR</h3>
 <br/><br/><br/><br/><br/>
 add the food items you eat:&nbsp;
-<input type="text" name="food"/><br/><br/>
+<input type="text" id="food" name="food"/><br/><br/>
 how much carbs does it contain ?<br/><br/>
 <input id="carbs" type="number" name="carbs"/><br/><br/>
 how much proteins does it contain ?<br/><br/>
@@ -57,9 +57,10 @@ how much fats does it contain ?<br/><br/>
 <input id="fats" type="number" name="fats"/><br/><br/><br/><br/><br/>
 add the amount of water you consumed after the last entry.<br/><br/>
 <input id="water" type="number" name="water"/><br/><br/>
-<button id="btn2" onclick=" check()" >save</button><br/>
-<button id="btn3" onclick=" check()" >add</button><br/>
-<button id="btn4" onclick=" check()" >next day</button><br/>
+<button id="btn2" onclick=" save()" >save</button><br/>
+<button id="btn2" onclick=" first()" >first meal today</button><br/>
+<button id="btn3" onclick=" add()" >add</button><br/>
+<button id="btn4" onclick=" clear()" >next day</button><br/>
 </form>
 <br/>
 <p id="notice">
@@ -90,8 +91,12 @@ Please make sure you update the details frequently for managing your health bett
     else(){alert('your on perfect diet')}
 	
   }
-</script> -->	
+</script> -->
 <script src="script.js" ></script> 
+<script src="extra2.js" ></script> 
+<script src="extra.js" ></script> 
+<script src="trial.js" ></script> 
+
 </body>
 
 </html>
