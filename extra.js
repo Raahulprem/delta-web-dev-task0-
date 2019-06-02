@@ -5,23 +5,34 @@ function save(){
 	no += 1;
     
 localStorage.setItem("n",no);
-//no = parseInt(localStorage.getItem("n"));
+no = parseInt(localStorage.getItem("n"));
 no = localStorage.getItem("n");
-//alert(no);
-    list[no] = document.getElementById("food").value,
+
+    food[no] = document.getElementById("food").value;
       
-    /* var info = {list :[ { 
-	            
-				name:document.getElementById("food").value,
-				carbs:document.getElementById("carbs").value,
-				fats:document.getElementById("fats").value,
-				proteins:document.getElementById("proteins").value,
-				water:document.getElementById("water").value,
-	 }]
-		 
-		 
-}	*/
-localStorage.setItem("stored[no]",JSON.stingify(list));  
-var h = JSON.parse(localStorage.getItem("stored[no]"));  
-alert(h[no]);
+localStorage.setItem("food"+no,food[no]);  
+var f = localStorage.getItem("food"+no);  
+alert(f[no]);
+
+  var  cark = document.getElementById("carbs").value;
+      
+localStorage.setItem("cark"+no,cark);  
+var ck = localStorage.getItem("cark"+no);  
+alert(ck[no]);
+
+   var fak = document.getElementById("fats").value;
+      
+localStorage.setItem("fk"+no,fak);  
+var fk = localStorage.getItem("fk"+no);  
+alert(fk[no]);
+
+   var  pro = document.getElementById("proteins").value;
+      
+localStorage.setItem("prote"+no,pro);  
+var proten = localStorage.getItem("prote"+no);  
+alert(proten[no]);
+
+
 }
+
+
