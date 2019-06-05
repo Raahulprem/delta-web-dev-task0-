@@ -33,6 +33,16 @@ var proten = localStorage.getItem("prote"+no);
 alert(proten[no]);
 
 
+var tbl = document.getElementById("history");
+var row = tbl.insertRow();
+  var c1 = row.insertCell();  
+  var c2 = row.insertCell();
+  var c3 = row.insertCell();
+  var c4 = row.insertCell();
+
+c1.innerHTML = f;
+c2.innerHTML = ck;
+c3.innerHTML = fk;
+c4.innerHTML = proten;
+  
 }
-
-
